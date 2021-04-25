@@ -1,0 +1,34 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input input {
+    height: 47px;
+    min-width: 237px;
+    width: 100%;
+    padding: 0 15px;
+    border-radius: 5px;
+    border: solid 1px #E3E3E3;
+    background: #FAFAFA;
+
+    color: #2B353E;
+
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.input label {
+    color: #949494;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.08px;
+    margin-bottom: 5px;
+}
+
+.invalid {
+
+}

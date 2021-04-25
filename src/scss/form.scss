@@ -1,0 +1,95 @@
+.user-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 50px 0;
+
+  &__action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+
+  &__button {
+    color: #4086F1;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: -0.08px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  &__fields {
+    margin-top: 40px;
+  }
+
+  &__field {
+    margin: 0 7px 20px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  &__upload {
+
+    .user-photo {
+
+      &__bg {
+        cursor: pointer;
+        position: relative;
+        width: 150px;
+        height: 150px;
+
+        &:hover  {
+          .user-photo__avatar {
+            background: rgba(151, 151, 151, 0.7);
+            transition: all 0.2s ease;
+          }
+        }
+      }
+
+      &__avatar {
+        padding-top: 30px;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: #D8D8D8;
+
+        transition: all 0.2s ease;
+/*
+        &:hover {
+          background: rgba(151, 151, 151, 0.7);
+          transition: all 0.2s ease;
+        }*/
+      }
+
+      &__photo {
+        position: absolute;
+        top: calc(50% - 60px / 2);
+        right: calc(50% - 69px / 2);
+      }
+    }
+
+  }
+
+}
+
+.file-input {
+  display: none;
+}
+
+.flex-50 {
+  flex-basis: 50%;
+}
+
+.flex-100 {
+  flex-basis: 100%;
+}

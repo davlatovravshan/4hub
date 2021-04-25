@@ -1,0 +1,113 @@
+@import 'src/scss/vars';
+
+.menu {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 257px;
+  height: 100%;
+  background: $menuColor;
+  color: #fff;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  transition: all 0.2s;
+}
+
+.menu.active {
+  width: 60px;
+}
+
+.menu::-webkit-scrollbar {
+  width: 5px;
+  border: solid 2px transparent;
+  background-color: transparent;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 0 36px 0;
+
+  &__logo {
+    width: 60px;
+  }
+
+  &__logo-sm {
+    text-align: center;
+  }
+}
+
+.menu-content {
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+  }
+
+  &__header-sm {
+    padding: 0;
+  }
+
+  &__title {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: block;
+    padding: 20px 0;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 16px 15px;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+  }
+
+  &__icon {
+    min-width: 25px;
+    margin-right: 10px;
+    text-align: center;
+  }
+
+  &__label {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+}
+
+.menu-arrow-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: right;
+  margin: 5px;
+}
+
+.menu-arrow-btn-sm {
+  width: 100%;
+  text-align: center;
+  transform: rotate(180deg);
+}

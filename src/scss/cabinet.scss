@@ -1,0 +1,112 @@
+@import "src/scss/vars.scss";
+
+body {
+  height: calc(100% - 90px);
+  margin-top: 90px;
+}
+
+.parent {
+  height: 100%;
+  display: flex;
+}
+
+.main {
+  position: relative;
+  width: calc(100% - 257px);
+  margin-left: auto;
+
+  transition: all 0.2s;
+}
+
+.main.toggle {
+  width: calc(100% - 60px);
+
+  transition: all 0.2s;
+}
+
+
+.bottom-panel {
+  position: fixed;
+
+  bottom: -50px;
+
+  width: calc(100% - 257px);
+
+  display: flex;
+  justify-content: center;
+
+  transition: all 0.2s;
+
+  &__wrapper {
+    position: relative;
+
+    width: 800px;
+    max-width: 100%;
+    height: 50px;
+
+    background: $bottomPanelColor;
+    border-radius: 5px 5px 0 0;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__action {
+    position: absolute;
+    top: -12px;
+    width: 100%;
+
+    transition: all 0.2s;
+  }
+
+  &__open {
+    cursor: pointer;
+    width: 100px;
+    border-radius: 5px 5px 0 0;
+    padding-top: 1px;
+    margin: 0 auto;
+    height: 12px;
+    background: $bottomPanelColor;
+  }
+
+  &__line {
+    margin: 3px auto;
+    border-radius: 20px;
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  &__list {
+    width: 100%;
+    margin: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    padding: 0 20px;
+  }
+}
+
+.bottom-panel.active {
+  bottom: 0;
+
+  .bottom-panel__action {
+    top: 0;
+    transition: all 0.2s;
+  }
+
+}
+
+.bottom-panel.toggle {
+  width: calc(100% - 60px);
+  transition: all 0.2s;
+}
+
+
+.dropdown-selector {
+  position: relative;
+}
